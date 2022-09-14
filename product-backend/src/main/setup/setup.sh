@@ -11,5 +11,4 @@
 # ./setup.sh
 
 # Make sure to input your own password --password=<here>
-mysql --user=root --password=mariadb.password < initialise.sql
-
+mysql --user=root --password=mariadb.password < initialiseDatabase.sql
