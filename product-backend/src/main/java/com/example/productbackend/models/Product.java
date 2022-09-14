@@ -13,10 +13,10 @@ public class Product {
     @Id
     @GeneratedValue
     private Integer id;
-    @Column
+    @Column(name = "name", nullable = false)
     private String name;
-    @Column
+    @Column(name = "description")
     private String description;
-    @Column
+    @Column(name = "inStock", nullable = false)
     private Integer inStock;
 }

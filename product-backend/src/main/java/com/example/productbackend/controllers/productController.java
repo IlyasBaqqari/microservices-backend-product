@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class productController {
@@ -17,6 +18,10 @@ public class productController {
 
     @GetMapping("/products")
     public List<Product> getProducts() { return repository.findAll(); }
+
+    @GetMapping("/products/{id}")
+    public Optional<Product> getProductById(@PathVariable Integer id) { return repository.findById(id); };
+
 
     @PostMapping("/products")
     public Product postProduct(@RequestBody Product product) {
